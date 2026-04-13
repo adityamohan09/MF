@@ -45,28 +45,27 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="font-sans text-xs text-muted-foreground mb-1">Phone</p>
-                <a 
-                  href="tel:+918826284330"
-                  className="font-sans text-sm text-foreground hover:text-accent transition-colors"
+                <a
+                  href="tel:+919811069033"
+                  className="font-sans text-sm text-foreground hover:text-accent transition-colors font-semibold"
                 >
-                  +91 8826 284 330
+                  +91 9811 069 033
                 </a>
               </div>
               <div>
-                <p className="font-sans text-xs text-muted-foreground mb-1">Email</p>
-                <a 
-                  href="mailto:info@maharashtrafoodstall.com"
-                  className="font-sans text-sm text-foreground hover:text-accent transition-colors"
-                >
-                  info@mfs.com
-                </a>
+                <p className="font-sans text-xs text-muted-foreground mb-1">Address</p>
+                <p className="font-sans text-sm text-foreground">
+                  Stall No: 20<br />
+                  Dilli Haat, INA<br />
+                  New Delhi - 110023
+                </p>
               </div>
             </div>
           </div>
 
           {/* Column 3: Hours & Social */}
           <div>
-            <h3 className="font-serif text-lg mb-6 text-foreground">Hours & Social</h3>
+            <h3 className="font-serif text-lg mb-6 text-foreground">Hours & Connect</h3>
             <div className="space-y-4">
               <div>
                 <p className="font-sans text-xs text-muted-foreground mb-2">Opening Hours</p>
@@ -75,17 +74,38 @@ export default function Footer() {
                   11:00 AM – 9:00 PM
                 </p>
               </div>
-              <div className="flex gap-4 mt-4">
-                <a href="#" className="text-accent hover:text-secondary transition-colors">
-                  <span className="sr-only">Facebook</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 0C4.477 0 0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.99 20 10c0-5.523-4.477-10-10-10z" />
+              <div className="flex gap-4 mt-6">
+                <a
+                  href="https://www.instagram.com/maharashtrafoodstall"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-secondary transition-colors"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10-10-4.477-10-10 4.477-10 10-10zm3.6 5.2c-.56 0-1.2.64-1.2 1.2s.64 1.2 1.2 1.2c.56 0 1.2-.64 1.2-1.2s-.64-1.2-1.2-1.2zm-3.6 1.6c-2.64 0-4.8 2.16-4.8 4.8s2.16 4.8 4.8 4.8 4.8-2.16 4.8-4.8-2.16-4.8-4.8-4.8zm0 1.6c1.76 0 3.2 1.44 3.2 3.2s-1.44 3.2-3.2 3.2-3.2-1.44-3.2-3.2 1.44-3.2 3.2-3.2z" />
                   </svg>
                 </a>
-                <a href="#" className="text-accent hover:text-secondary transition-colors">
-                  <span className="sr-only">Instagram</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.26 7.195c.005.118.008.237.008.356 0 3.645-2.776 7.852-7.852 7.852-1.559 0-3.008-.456-4.234-1.244.216.025.435.038.656.038 1.294 0 2.486-.44 3.43-1.181-1.207-.022-2.223-.82-2.574-1.916.169.032.341.049.518.049.252 0 .497-.033.731-.097-1.261-.253-2.212-1.366-2.212-2.703v-.034c.371.206.796.33 1.251.345-.741-.495-1.229-1.338-1.229-2.294 0-.505.136-.979.373-1.387 1.36 1.668 3.39 2.768 5.68 2.884-.047-.2-.07-.407-.07-.619 0-1.5 1.215-2.715 2.715-2.715.781 0 1.486.33 1.98.857.618-.122 1.2-.348 1.725-.659-.202.633-.632 1.164-1.192 1.5.549-.066 1.071-.211 1.557-.428-.363.542-.823 1.017-1.351 1.401z" />
+                <a
+                  href="https://www.facebook.com/profile.php?id=100070982015018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-secondary transition-colors"
+                >
+                  <span className="sr-only">Facebook</span>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 1.667c-4.595 0-8.333 3.738-8.333 8.333s3.738 8.333 8.333 8.333 8.333-3.738 8.333-8.333-3.738-8.333-8.333-8.333zm2 2a1.667 1.667 0 110 3.334 1.667 1.667 0 010-3.334zm-2 1.333c-1.841 0-3.333 1.492-3.333 3.333s1.492 3.333 3.333 3.333 3.333-1.492 3.333-3.333-1.492-3.333-3.333-3.333z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/maharashtra-food"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-secondary transition-colors"
+                >
+                  <span className="sr-only">LinkedIn</span>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 9.5h2V16h-2v-6.5zm1-2.082c.637 0 1.152-.515 1.152-1.152 0-.637-.515-1.152-1.152-1.152-.637 0-1.152.515-1.152 1.152 0 .637.515 1.152 1.152 1.152zM16 16h-2.5v-3.5c0-.831-.3-1.4-1.04-1.4-.567 0-.904.383-.954 1.152h-.017v3.748H9v-6.5h2.416v.888h.035c.3-.452.977-1.168 2.411-1.168 2.269 0 3.961 1.492 3.961 4.701V16z" />
                   </svg>
                 </a>
               </div>
