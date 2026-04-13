@@ -22,12 +22,16 @@ export default function Footer() {
           <div>
             <h3 className="font-serif text-lg mb-6 text-foreground">Location</h3>
             <div className="space-y-4">
-              <div className="aspect-video bg-muted rounded-sm mb-4 flex items-center justify-center text-sm text-muted-foreground">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.6890577876427!2d77.2082347!3d28.5704158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f68f2c7f7f%3A0x1e8e6e6b5b8e8e6e!2sDilli%20Haat%2C%20INA%20Market%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-sm"
+              />
               <p className="font-sans text-sm text-foreground">
                 Dilli Haat INA<br />
                 New Delhi
@@ -118,7 +122,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
             <p className="font-sans text-xs sm:text-sm text-foreground">
-              Serving authentic Maharashtrian food in Delhi since 1994
+              Serving authentic Maharashtrian food in Delhi since 1994 • Dilli Haat INA
             </p>
             <p className="font-sans text-xs sm:text-sm text-muted-foreground text-center sm:text-right">
               © 2025 Maharashtra Food Stall

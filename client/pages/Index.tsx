@@ -74,21 +74,30 @@ export default function Index() {
 
       {/* HERO SECTION */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-        <div className="text-center space-y-8">
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-tight text-foreground">
-            Taste <span className="text-accent">the legacy</span> of authentic Maharashtrian food
-          </h1>
-          <p className="font-sans text-lg sm:text-xl text-foreground max-w-2xl mx-auto leading-relaxed">
-            Serving Delhi since 1994, our stall at Dilli Haat INA carries forward generations of culinary tradition and warmth.
-          </p>
-        </div>
+        <div className="space-y-12">
+          <div className="text-center space-y-6">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight text-foreground">
+              Authentic Maharashtrian Food in Delhi, <span className="text-accent">Since 1994</span>
+            </h1>
+            <div className="space-y-4 font-sans text-lg sm:text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
+              <p>
+                Tucked inside Dilli Haat INA, we've been serving the same food, in the same spirit, for over three decades.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground">
+                One of the very first food stalls here, inaugurated on 28th March 1994 by Atal Bihari Vajpayee.
+              </p>
+              <p>
+                Just food made the way it always was, for people who value how it feels as much as how it tastes.
+              </p>
+            </div>
+          </div>
 
-        <div className="mt-16 relative">
-          <div className="h-80 sm:h-96 bg-muted rounded-sm flex items-center justify-center text-muted-foreground overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent" />
-            <svg className="w-20 h-20 text-accent/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 6v6m0 0v6m0-6h6m0 0h6m0 0h-6m0 0H6m0 0H0" />
-            </svg>
+          <div className="mt-12 relative">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Faf03adb24251416b91a4f43841b93384%2F66dc36b4ccaf435e998463ff4f8b665b?format=webp&width=800&height=1200"
+              alt="Maharashtra Food Stall - Dilli Haat"
+              className="w-full h-auto rounded-sm shadow-sm"
+            />
           </div>
         </div>
       </section>
@@ -103,17 +112,20 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <h2 className="font-serif text-4xl sm:text-5xl mb-8 text-foreground">
-                Our Story
+                Here Since the Beginning
               </h2>
               <div className="space-y-6 font-sans text-foreground leading-relaxed">
                 <p>
-                  In 1994, we opened our doors at Dilli Haat with a simple mission: to bring the authentic tastes of Maharashtra to Delhi. Three decades later, we remain committed to that promise.
+                  When Dilli Haat first opened its gates in 1994, we were here. Among the first food stalls, representing Maharashtrian cuisine from day one.
                 </p>
                 <p>
-                  Every dish we prepare is a reflection of our heritage, crafted using time-honored recipes passed down through our family. We believe in the power of tradition to create moments of genuine connection.
+                  Back then, it was about bringing different parts of India together through craft and food. We became the Maharashtrian part of that story, and quietly stayed on.
                 </p>
                 <p>
-                  From our signature Misal Pav to our beloved Puran Poli, every bite carries the warmth of a home kitchen and the pride of our culinary legacy.
+                  Years passed. Stalls changed. The city moved faster. But for us, the work remained the same. Showing up every day, doing it properly, and letting the food speak for itself.
+                </p>
+                <p className="text-muted-foreground italic">
+                  For many, this place has been visited across years, sometimes across generations. And that's not something you plan. It just happens when you stay consistent long enough.
                 </p>
               </div>
             </div>
@@ -134,35 +146,20 @@ export default function Index() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-foreground">
-            What Makes Us Different
+            We Kept It Simple, On Purpose
           </h2>
-          <p className="font-sans text-lg text-foreground max-w-2xl mx-auto">
-            In a world of fleeting trends, we stand for what endures.
+          <p className="font-sans text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+            There was never a need to turn this into something else. No fusion. No reinvention. No attempt to make it look like more than what it is.
           </p>
         </div>
 
         <div className="space-y-8 sm:space-y-12">
-          {/* Feature 1 */}
-          <div className="border-l-2 border-accent pl-6 sm:pl-8">
-            <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Authentic Recipes</h3>
-            <p className="font-sans text-foreground text-base sm:text-lg leading-relaxed">
-              Every dish is prepared using traditional Maharashtrian methods, with no shortcuts or modern substitutions. We believe authentic taste cannot be rushed.
+          <div className="max-w-3xl mx-auto space-y-6 font-sans text-foreground leading-relaxed text-base sm:text-lg">
+            <p>
+              Just honest Maharashtrian food, made with care and served without noise. Recipes that have stayed true to their roots, unchanged over the years.
             </p>
-          </div>
-
-          {/* Feature 2 */}
-          <div className="border-l-2 border-accent pl-6 sm:pl-8">
-            <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Fresh, Quality Ingredients</h3>
-            <p className="font-sans text-foreground text-base sm:text-lg leading-relaxed">
-              We source our ingredients thoughtfully, prioritizing freshness and quality. You taste the difference in every bite.
-            </p>
-          </div>
-
-          {/* Feature 3 */}
-          <div className="border-l-2 border-accent pl-6 sm:pl-8">
-            <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Consistency Over Time</h3>
-            <p className="font-sans text-foreground text-base sm:text-lg leading-relaxed">
-              For three decades, we've served the same beloved dishes with unwavering dedication. Consistency is our quiet promise.
+            <p>
+              The kind people recognise not because it stands out, but because it feels right. And once it feels right, it stays with you.
             </p>
           </div>
         </div>
@@ -177,45 +174,70 @@ export default function Index() {
       {/* EXPERIENCE / CULTURAL CONTEXT */}
       <section className="bg-stone-50 py-16 sm:py-24 lg:py-32">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl sm:text-5xl mb-12 text-foreground text-center">
-            Experience Maharashtrian Culture
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-foreground">
+              A Familiar Stop in a Changing City
+            </h2>
+            <p className="font-sans text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+              Dilli Haat has always been a place people come to when they want to slow down a little. A small pause in the middle of a busy day, that somehow always feels the same.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
-            <div className="text-center">
-              <div className="h-48 bg-muted rounded-sm mb-6 flex items-center justify-center text-muted-foreground">
-                <svg className="w-16 h-16 text-accent/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m0 0h6m0 0h-6m0 0H6" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">Food Heritage</h3>
+          <div className="space-y-10 max-w-3xl mx-auto">
+            <div className="border-l-2 border-accent pl-6 sm:pl-8">
+              <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">First Time Visitors</h3>
               <p className="font-sans text-foreground leading-relaxed">
-                Maharashtrian cuisine reflects centuries of cultural richness and regional pride, passed through generations.
+                Some hear about us before they arrive. Some discover us while walking through Dilli Haat. Either way, once you know where we are, you tend to come back.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="h-48 bg-muted rounded-sm mb-6 flex items-center justify-center text-muted-foreground">
-                <svg className="w-16 h-16 text-accent/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">Community</h3>
+            <div className="border-l-2 border-accent pl-6 sm:pl-8">
+              <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Those Who Return</h3>
               <p className="font-sans text-foreground leading-relaxed">
-                Dilli Haat brings communities together. Food is how we celebrate, connect, and honor our roots.
+                For others, it's something they return to without thinking twice. A familiar stop that feels like coming home, no matter how much time has passed.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="h-48 bg-muted rounded-sm mb-6 flex items-center justify-center text-muted-foreground">
-                <svg className="w-16 h-16 text-accent/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">Time Honored</h3>
+            <div className="border-l-2 border-accent pl-6 sm:pl-8">
+              <h3 className="font-serif text-2xl sm:text-3xl mb-3 text-foreground">Across Generations</h3>
               <p className="font-sans text-foreground leading-relaxed">
-                Thirty years of service is our commitment to quality, trust, and the values we hold dear.
+                For many, this place has been visited across years, sometimes across generations. And that's what we're most proud of—being part of the rhythm of people's lives.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL PROOF / CREDIBILITY */}
+      <section className="bg-muted py-16 sm:py-24 lg:py-32">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-foreground">
+              Built Over Time, Not Overnight
+            </h2>
+            <p className="font-sans text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+              There's a certain trust that only comes with time. We've had the time.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="border-l-2 border-accent pl-6">
+              <p className="font-sans text-foreground">Serving at Dilli Haat INA since 1994</p>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="font-sans text-foreground">Among the first food stalls since its inception</p>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="font-sans text-foreground">Inaugurated during the opening by Atal Bihari Vajpayee</p>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="font-sans text-foreground">Recipes preserved, not altered</p>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="font-sans text-foreground">Known through word of mouth, not advertising</p>
+            </div>
+            <div className="border-l-2 border-accent pl-6">
+              <p className="font-sans text-foreground">One of the few authentic Maharashtrian food sources in Delhi</p>
             </div>
           </div>
         </div>
@@ -223,9 +245,14 @@ export default function Index() {
 
       {/* LOCATION / DISCOVERY */}
       <section id="location" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-        <h2 className="font-serif text-4xl sm:text-5xl mb-12 text-foreground text-center">
-          Find Us
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-foreground">
+            If You're Looking for Maharashtrian Food in Delhi
+          </h2>
+          <p className="font-sans text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+            You'll find us inside Dilli Haat INA. For those searching for something regional, something authentic, something that hasn't been changed along the way, this is where many end up.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
@@ -255,6 +282,28 @@ export default function Index() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING SECTION */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+        <div className="text-center space-y-8 max-w-3xl mx-auto">
+          <h2 className="font-serif text-4xl sm:text-5xl text-foreground">
+            Some Things Don't Need Changing
+          </h2>
+          <p className="font-sans text-lg text-foreground leading-relaxed">
+            Over the years, we've seen trends come and go. But good food, made with care and served honestly, has a way of staying relevant without trying.
+          </p>
+          <p className="font-sans text-lg text-foreground leading-relaxed">
+            That's all we've held on to.
+          </p>
+          <div className="pt-8 border-t border-border">
+            <p className="font-sans text-lg text-foreground leading-relaxed">
+              If you're at Dilli Haat, come by.
+              <br />
+              <span className="text-accent font-semibold">We'll be right where we've always been.</span>
+            </p>
           </div>
         </div>
       </section>
