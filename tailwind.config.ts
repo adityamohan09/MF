@@ -5,6 +5,10 @@ export default {
   content: ["./client/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
+    fontFamily: {
+      serif: ["Cormorant Garamond", "Georgia", "serif"],
+      sans: ["Inter", "sans-serif"],
+    },
     container: {
       center: true,
       padding: "2rem",

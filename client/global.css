@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,51 +12,46 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Heritage color scheme - warm off-white and muted red */
+    --background: 36 40% 96%;
+    --foreground: 20 30% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 40% 97%;
+    --card-foreground: 20 30% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 40% 97%;
+    --popover-foreground: 20 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 20 30% 20%;
+    --primary-foreground: 36 40% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 357 61% 45%;
+    --secondary-foreground: 36 40% 97%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 36 30% 85%;
+    --muted-foreground: 20 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted red accent for heritage feel */
+    --accent: 357 61% 45%;
+    --accent-foreground: 36 40% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 36 30% 85%;
+    --input: 36 40% 97%;
+    --ring: 357 61% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 36 40% 96%;
+    --sidebar-foreground: 20 30% 20%;
+    --sidebar-primary: 357 61% 45%;
+    --sidebar-primary-foreground: 36 40% 97%;
+    --sidebar-accent: 36 30% 85%;
+    --sidebar-accent-foreground: 20 30% 20%;
+    --sidebar-border: 36 30% 85%;
+    --sidebar-ring: 357 61% 45%;
   }
 
   .dark {
@@ -105,9 +100,40 @@
 
   body {
     @apply bg-background text-foreground;
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.03) 2px,
+        rgba(0, 0, 0, 0.03) 4px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.02) 2px,
+        rgba(0, 0, 0, 0.02) 4px
+      );
   }
 
-  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  p, span, li, a, button, label, td, th {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
