@@ -166,48 +166,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ABOUT DILLI HAAT */}
-      <section data-section="dillihaat" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-muted/30 via-stone-50 to-muted/20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 transition-all duration-1000 ${isScrolled['dillihaat'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
-              <p className="font-sans text-sm text-accent font-semibold tracking-wider">HERITAGE SPACE</p>
-            </div>
-            <h2 className="font-serif text-4xl sm:text-5xl text-foreground">
-              A Space That Celebrates India
-            </h2>
-            <div className="w-12 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-6" />
-          </div>
-
-          <div className={`max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isScrolled['dillihaat'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="text-center p-6 rounded-lg bg-background/50 border border-border hover:border-accent hover:bg-background/80 transition-all duration-300">
-                <p className="font-serif text-3xl text-accent font-semibold mb-2">26</p>
-                <p className="font-sans text-sm text-foreground">Dedicated Food Stalls</p>
-              </div>
-              <div className="text-center p-6 rounded-lg bg-background/50 border border-border hover:border-accent hover:bg-background/80 transition-all duration-300">
-                <p className="font-serif text-3xl text-accent font-semibold mb-2">20+</p>
-                <p className="font-sans text-sm text-foreground">Years of Representation</p>
-              </div>
-              <div className="text-center p-6 rounded-lg bg-background/50 border border-border hover:border-accent hover:bg-background/80 transition-all duration-300">
-                <p className="font-serif text-3xl text-accent font-semibold mb-2">All</p>
-                <p className="font-sans text-sm text-foreground">Of India Celebrated</p>
-              </div>
-            </div>
-
-            <div className="space-y-5 font-sans text-foreground leading-relaxed text-lg">
-              <p className="font-light">
-                Dilli Haat is a unique initiative by the Delhi Tourism and Transport Development Corporation that brings together crafts, culture, and regional cuisines from across India in one place.
-              </p>
-              
-              <p className="font-light">
-                With 26 dedicated food stalls offering a rotating showcase of authentic state cuisines, Maharashtra Food Stall has proudly represented the state here for over two decades.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* WHAT WE STAND FOR */}
       <section data-section="values" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-background to-muted/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -256,52 +214,6 @@ export default function Index() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OUR IMPACT */}
-      <section data-section="impact" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-muted/40 via-background to-background overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/2 right-0 w-96 h-96 bg-accent rounded-full blur-3xl" />
-        </div>
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className={`text-center transition-all duration-1000 ${isScrolled['impact'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
-              <p className="font-sans text-sm text-accent font-semibold tracking-wider">OUR REACH</p>
-            </div>
-            <h2 className="font-serif text-4xl sm:text-5xl mb-6 text-foreground">
-              Loved Beyond Borders
-            </h2>
-            <div className="w-12 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto" />
-          </div>
-
-          <div className={`mt-16 max-w-2xl mx-auto space-y-8 transition-all duration-1000 delay-200 ${isScrolled['impact'] ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="text-center p-8 rounded-xl bg-gradient-to-br from-accent/5 to-transparent border border-accent/20 hover:border-accent/40 transition-all duration-300">
-              <p className="font-serif text-5xl sm:text-6xl font-bold text-accent mb-3">95%+</p>
-              <p className="font-sans text-xl text-foreground font-light">
-                of our customers are non-Maharashtrians
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <p className="font-sans text-2xl text-foreground italic font-light">
-                Yet, they return.
-              </p>
-              <p className="font-sans text-2xl text-foreground italic font-light">
-                Again and again.
-              </p>
-            </div>
-
-            <div className="space-y-4 font-sans text-foreground text-lg leading-relaxed">
-              <p className="font-light text-center">
-                Because authenticity speaks for itself.
-              </p>
-              <p className="font-light text-center">
-                Over 22+ years, we have built trust, familiarity, and a loyal customer base that values real, home-style Maharashtrian food.
-              </p>
-            </div>
           </div>
         </div>
       </section>
