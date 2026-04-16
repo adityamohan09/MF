@@ -142,7 +142,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
             <p className="font-sans text-xs sm:text-sm text-foreground">
-              Serving authentic Maharashtrian food in Delhi since 1994 • Dilli Haat INA
+              Stall No: 20, Dilli Haat, INA, New Delhi - 110023
             </p>
             <p className="font-sans text-xs sm:text-sm text-muted-foreground text-center sm:text-right">
               © 2025 Maharashtra Food Stall
