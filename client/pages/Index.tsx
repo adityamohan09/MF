@@ -218,54 +218,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* EVENTS & PRESENCE */}
-      <section data-section="events" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-background to-stone-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 transition-all duration-1000 ${isScrolled['events'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
-            <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
-              <p className="font-sans text-sm text-accent font-semibold tracking-wider">BEYOND DILLI HAAT</p>
-            </div>
-            <h2 className="font-serif text-4xl sm:text-5xl text-foreground">
-              Across India
-            </h2>
-            <p className="font-sans text-lg text-foreground/70 mt-4 max-w-2xl mx-auto">
-              Our journey has taken us to some of the most prestigious fairs and festivals
-            </p>
-            <div className="w-12 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-6" />
-          </div>
-
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-1000 delay-200 ${isScrolled['events'] ? 'opacity-100' : 'opacity-0'}`}>
-            {[
-              "India International Trade Fair",
-              "Surajkund Crafts Mela",
-              "Dastakar",
-              "Dastkaari Haat",
-              "Taj Utsav",
-              "Tourism Mela",
-              "Lucknow Mahotsav",
-              "MTDC Resort, Ganpatipule"
-            ].map((event, i) => (
-              <div 
-                key={i}
-                className="group p-6 rounded-lg border border-border bg-background hover:border-accent hover:shadow-lg hover:bg-accent/5 transition-all duration-300"
-                style={{ animation: isScrolled['events'] ? `fadeInUp 0.8s ease-out forwards` : 'none', animationDelay: `${i * 80}ms` }}
-              >
-                <div className="flex items-start gap-4">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <p className="font-sans text-sm text-foreground leading-relaxed">{event}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* AWARDS & RECOGNITION */}
-      <section data-section="awards" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-stone-50 to-background">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 transition-all duration-1000 ${isScrolled['awards'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
+      <section data-section="awards" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-stone-50 to-background overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-12 transition-all duration-1000 ${isScrolled['awards'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
             <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
               <p className="font-sans text-sm text-accent font-semibold tracking-wider">RECOGNITION</p>
             </div>
@@ -275,8 +231,15 @@ export default function Index() {
             <div className="w-12 h-1 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mt-6" />
           </div>
 
-          <div className={`max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isScrolled['awards'] ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="space-y-4">
+          {/* Infinite Scroll Carousel */}
+          <div className="relative overflow-hidden">
+            {/* Gradient overlays for fade effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-stone-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-stone-50 to-transparent z-10 pointer-events-none" />
+
+            {/* Scrolling container */}
+            <div className="flex gap-4 sm:gap-6 animate-scroll-left py-6">
+              {/* Original items */}
               {[
                 { year: "1998", award: "Best Vegetarian Stall", event: "Dilli Haat (Hindustan Times & ITC)" },
                 { year: "2008", award: "Best Authentic State Food", event: "Surajkund Mela" },
@@ -284,15 +247,39 @@ export default function Index() {
                 { year: "2015", award: "Maharashtrian Lady Entrepreneur", event: "Amhi Udyogini, Mumbai" },
                 { year: "2016", award: "Felicitation by the Chief Minister", event: "State of Maharashtra" }
               ].map((item, i) => (
-                <div 
-                  key={i}
-                  className="group relative p-6 rounded-lg border border-border bg-background/50 hover:border-accent hover:bg-accent/5 transition-all duration-300"
-                  style={{ animation: isScrolled['awards'] ? `fadeInUp 0.8s ease-out forwards` : 'none', animationDelay: `${i * 100}ms` }}
+                <div
+                  key={`original-${i}`}
+                  className="group relative flex-shrink-0 w-80 p-6 rounded-xl border border-border bg-background hover:border-accent hover:shadow-lg hover:bg-accent/5 transition-all duration-300"
                 >
-                  <div className="flex items-start justify-between gap-4">
+                  <div className="flex flex-col gap-3">
+                    <p className="font-sans text-sm text-accent font-semibold tracking-wide">{item.year}</p>
                     <div>
-                      <p className="font-sans text-sm text-accent font-semibold mb-1 tracking-wide">{item.year}</p>
-                      <p className="font-serif text-lg text-foreground font-semibold mb-1">{item.award}</p>
+                      <p className="font-serif text-lg text-foreground font-semibold mb-2">{item.award}</p>
+                      <p className="font-sans text-sm text-foreground/70">{item.event}</p>
+                    </div>
+                    <svg className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </div>
+                </div>
+              ))}
+
+              {/* Duplicate items for infinite loop */}
+              {[
+                { year: "1998", award: "Best Vegetarian Stall", event: "Dilli Haat (Hindustan Times & ITC)" },
+                { year: "2008", award: "Best Authentic State Food", event: "Surajkund Mela" },
+                { year: "2012", award: "Gold Award for Food", event: "IITF New Delhi" },
+                { year: "2015", award: "Maharashtrian Lady Entrepreneur", event: "Amhi Udyogini, Mumbai" },
+                { year: "2016", award: "Felicitation by the Chief Minister", event: "State of Maharashtra" }
+              ].map((item, i) => (
+                <div
+                  key={`duplicate-${i}`}
+                  className="group relative flex-shrink-0 w-80 p-6 rounded-xl border border-border bg-background hover:border-accent hover:shadow-lg hover:bg-accent/5 transition-all duration-300"
+                >
+                  <div className="flex flex-col gap-3">
+                    <p className="font-sans text-sm text-accent font-semibold tracking-wide">{item.year}</p>
+                    <div>
+                      <p className="font-serif text-lg text-foreground font-semibold mb-2">{item.award}</p>
                       <p className="font-sans text-sm text-foreground/70">{item.event}</p>
                     </div>
                     <svg className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="currentColor" viewBox="0 0 20 20">
@@ -302,11 +289,11 @@ export default function Index() {
                 </div>
               ))}
             </div>
-
-            <p className="font-sans text-center text-foreground mt-12 leading-relaxed text-lg font-light">
-              Each award reflects the <span className="text-accent font-semibold">trust and love</span> of our customers.
-            </p>
           </div>
+
+          <p className="font-sans text-center text-foreground mt-12 leading-relaxed text-lg font-light">
+            Each award reflects the <span className="text-accent font-semibold">trust and love</span> of our customers.
+          </p>
         </div>
       </section>
 
