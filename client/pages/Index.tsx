@@ -88,7 +88,7 @@ export default function Index() {
       </section>
 
       {/* FOUNDER STORY SECTION */}
-      <section data-section="founder" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-muted/30 to-background">
+      <section data-section="founder" className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className={`space-y-8 transition-all duration-1000 ${isScrolled['founder'] ? 'animate-fade-in-left opacity-100' : 'opacity-0'}`}>
@@ -129,7 +129,7 @@ export default function Index() {
       </section>
 
       {/* STORY SECTION */}
-      <section data-section="story" id="story" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-background via-muted/20 to-background">
+      <section data-section="story" id="story" className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-background via-muted/20 to-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 transition-all duration-1000 ${isScrolled['story'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
             <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
@@ -167,7 +167,7 @@ export default function Index() {
       </section>
 
       {/* WHAT WE STAND FOR */}
-      <section data-section="values" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-background to-muted/30">
+      <section data-section="values" className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 transition-all duration-1000 ${isScrolled['values'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
             <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
@@ -219,7 +219,7 @@ export default function Index() {
       </section>
 
       {/* AWARDS & RECOGNITION */}
-      <section data-section="awards" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-stone-50 to-background overflow-hidden">
+      <section data-section="awards" className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-stone-50 to-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transition-all duration-1000 ${isScrolled['awards'] ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}>
             <div className="inline-block mb-4 px-4 py-2 bg-accent/10 rounded-full">
@@ -298,7 +298,7 @@ export default function Index() {
       </section>
 
       {/* PHILOSOPHY SECTION */}
-      <section data-section="philosophy" className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden">
+      <section data-section="philosophy" className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-background via-muted/20 to-background overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/2 w-96 h-96 bg-accent rounded-full blur-3xl" />
         </div>
@@ -322,7 +322,7 @@ export default function Index() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="relative py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
+      <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl opacity-30" />
         </div>

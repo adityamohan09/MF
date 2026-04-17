@@ -3,13 +3,31 @@ import { useState } from "react";
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail("");
-      setTimeout(() => setSubscribed(false), 3000);
+    if (!email) return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setSubscribed(true);
+        setEmail("");
+        setTimeout(() => setSubscribed(false), 3000);
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -83,7 +101,9 @@ export default function Footer() {
                 >
                   <span className="sr-only">Instagram</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10-10-4.477-10-10 4.477-10 10-10zm3.6 5.2c-.56 0-1.2.64-1.2 1.2s.64 1.2 1.2 1.2c.56 0 1.2-.64 1.2-1.2s-.64-1.2-1.2-1.2zm-3.6 1.6c-2.64 0-4.8 2.16-4.8 4.8s2.16 4.8 4.8 4.8 4.8-2.16 4.8-4.8-2.16-4.8-4.8-4.8zm0 1.6c1.76 0 3.2 1.44 3.2 3.2s-1.44 3.2-3.2 3.2-3.2-1.44-3.2-3.2 1.44-3.2 3.2-3.2z" />
+                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.205.63c-.704.272-1.291.613-1.877 1.2-.586.586-.928 1.173-1.2 1.877-.297.7-.497 1.57-.557 2.848C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.26 2.148.557 2.848.272.703.613 1.29 1.2 1.876.586.587 1.173.928 1.877 1.2.3.297 1.17.497 2.448.557 1.28.06 1.687.072 4.947.072s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.848-.557.703-.272 1.29-.613 1.876-1.2.587-.586.928-1.173 1.2-1.877.297-.7.497-1.57.557-2.848.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.148-.557-2.848-.272-.703-.613-1.29-1.2-1.876-.586-.587-1.173-.928-1.877-1.2-.7-.297-1.57-.497-2.848-.557C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.009 4.849.070 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.061 1.264.07 1.645.07 4.849 0 3.203-.009 3.585-.07 4.849-.055 1.17-.249 1.805-.415 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.057.36-2.227.413-1.264.061-1.645.07-4.849.07-3.203 0-3.585-.009-4.849-.07-1.17-.055-1.805-.249-2.227-.415-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.061-1.264-.07-1.645-.07-4.849 0-3.203.009-3.585.07-4.849.055-1.17.249-1.805.415-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.264-.061 1.645-.07 4.849-.07z" />
+                    <circle cx="12" cy="12" r="3.592" />
+                    <circle cx="18.406" cy="5.594" r="0.846" />
                   </svg>
                 </a>
                 <a
@@ -94,7 +114,7 @@ export default function Footer() {
                 >
                   <span className="sr-only">Facebook</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 1.667c-4.595 0-8.333 3.738-8.333 8.333s3.738 8.333 8.333 8.333 8.333-3.738 8.333-8.333-3.738-8.333-8.333-8.333zm2 2a1.667 1.667 0 110 3.334 1.667 1.667 0 010-3.334zm-2 1.333c-1.841 0-3.333 1.492-3.333 3.333s1.492 3.333 3.333 3.333 3.333-1.492 3.333-3.333-1.492-3.333-3.333-3.333z" />
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </a>
                 <a
@@ -105,7 +125,7 @@ export default function Footer() {
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 9.5h2V16h-2v-6.5zm1-2.082c.637 0 1.152-.515 1.152-1.152 0-.637-.515-1.152-1.152-1.152-.637 0-1.152.515-1.152 1.152 0 .637.515 1.152 1.152 1.152zM16 16h-2.5v-3.5c0-.831-.3-1.4-1.04-1.4-.567 0-.904.383-.954 1.152h-.017v3.748H9v-6.5h2.416v.888h.035c.3-.452.977-1.168 2.411-1.168 2.269 0 3.961 1.492 3.961 4.701V16z" />
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
                   </svg>
                 </a>
               </div>
@@ -123,14 +143,16 @@ export default function Footer() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
+                placeholder="your.email@example.com"
+                required
                 className="w-full px-3 py-2 bg-background border border-border text-sm font-sans focus:outline-none focus:ring-1 focus:ring-accent"
               />
               <button
                 type="submit"
-                className="w-full px-3 py-2 bg-accent text-accent-foreground font-sans text-sm font-medium hover:bg-secondary transition-colors"
+                disabled={isLoading}
+                className="w-full px-3 py-2 bg-accent text-accent-foreground font-sans text-sm font-medium hover:bg-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {subscribed ? "Subscribed!" : "Subscribe"}
+                {subscribed ? "✓ Received!" : isLoading ? "Sending..." : "Send Email"}
               </button>
             </form>
           </div>
