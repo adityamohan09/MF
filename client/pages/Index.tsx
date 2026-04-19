@@ -115,14 +115,12 @@ export default function Index() {
             </div>
 
             <div className={`relative transition-all duration-1000 ${isScrolled['founder'] ? 'animate-fade-in-right opacity-100' : 'opacity-0'}`}>
-              <div className="absolute inset-0 bg-gradient-to-tr from-accent/5 to-transparent rounded-xl blur-2xl" />
-              <div className="relative bg-gradient-to-br from-muted to-background border border-border rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500">
-                <svg className="w-16 h-16 text-accent/30 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <p className="font-serif text-3xl text-foreground font-light">A Vision Born From</p>
-                <p className="font-serif text-xl text-accent mt-2">Passion & Culture</p>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-lg blur-2xl" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Faf03adb24251416b91a4f43841b93384%2F4b1c230bea9c4238b36e53eb009bc03a?format=webp&width=800&height=1200"
+                alt="Vibhavari N. Chiplunkar - Founder of Maharashtra Food Stall"
+                className="relative w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 object-cover"
+              />
             </div>
           </div>
         </div>
