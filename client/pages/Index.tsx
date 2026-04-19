@@ -46,42 +46,90 @@ export default function Index() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl opacity-5" />
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="space-y-8 animate-fade-in-left">
-              <div>
-                <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-tight text-foreground mb-4">
-                  Maharashtra on a <span className="text-accent">Plate</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            {/* LEFT COLUMN - TEXT CONTENT */}
+            <div className="space-y-6 sm:space-y-8 animate-fade-in-left order-2 lg:order-1">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full border border-accent/20 w-fit">
+                <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                <p className="font-sans text-xs sm:text-sm text-accent font-semibold tracking-wider">SINCE 1994</p>
+              </div>
+
+              {/* Main Heading */}
+              <div className="space-y-3 sm:space-y-4">
+                <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-tight text-foreground">
+                  Maharashtra on a <span className="text-accent block">Plate</span>
                 </h1>
-                <p className="font-sans text-xl text-muted-foreground font-light">
+                <p className="font-sans text-lg sm:text-xl text-muted-foreground font-light">
                   In the Heart of Delhi
                 </p>
               </div>
 
-              <p className="font-sans text-lg text-foreground leading-relaxed max-w-md">
-                Serving authentic Maharashtrian cuisine at Dilli Haat since 1994
-              </p>
+              {/* Description */}
+              <div className="space-y-4">
+                <p className="font-sans text-base sm:text-lg text-foreground leading-relaxed max-w-lg font-light">
+                  Serving authentic Maharashtrian cuisine with pride and passion. A culinary heritage spanning three decades, unchanged and timeless.
+                </p>
 
-              <a
-                href="https://share.google/ucRbokyY4t54wyqke"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold hover:bg-secondary transition-all duration-300 hover:shadow-lg hover:scale-105"
-              >
-                Visit Us at Dilli Haat
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+                {/* Trust Indicators */}
+                <div className="flex flex-wrap gap-4 sm:gap-6 pt-2">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-sans text-sm text-foreground">30+ Years</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-sans text-sm text-foreground">Authentic</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-sans text-sm text-foreground">Heritage</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4 sm:pt-6">
+                <a
+                  href="https://share.google/ucRbokyY4t54wyqke"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-accent to-secondary text-accent-foreground font-sans font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                >
+                  <span>Visit Us at Dilli Haat</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <p className="font-sans text-xs text-muted-foreground mt-3">
+                  📍 Stall No: 20, Dilli Haat INA, New Delhi
+                </p>
+              </div>
             </div>
 
-            <div className="relative animate-fade-in-right">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-lg blur-2xl" />
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2Faf03adb24251416b91a4f43841b93384%2F66dc36b4ccaf435e998463ff4f8b665b?format=webp&width=800&height=1200"
-                alt="Maharashtra Food Stall - Dilli Haat"
-                className="w-full h-auto rounded-lg shadow-2xl relative z-10 hover:shadow-accent/20 transition-all duration-500"
-              />
+            {/* RIGHT COLUMN - IMAGE */}
+            <div className="relative animate-fade-in-right order-1 lg:order-2">
+              {/* Background Effect */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-accent/15 via-accent/5 to-transparent rounded-2xl blur-3xl" />
+
+              {/* Image Container */}
+              <div className="relative">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Faf03adb24251416b91a4f43841b93384%2F66dc36b4ccaf435e998463ff4f8b665b?format=webp&width=800&height=1200"
+                  alt="Maharashtra Food Stall - Dilli Haat"
+                  className="w-full h-auto rounded-xl shadow-2xl relative z-10 hover:shadow-3xl transition-all duration-500 object-cover"
+                  loading="lazy"
+                />
+                {/* Shine Effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/0 via-white/0 to-white/10 pointer-events-none" />
+              </div>
             </div>
           </div>
         </div>
