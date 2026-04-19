@@ -367,6 +367,189 @@ export default function Index() {
         </div>
       </section>
 
+      {/* CATERING SECTION */}
+      <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-muted/20 to-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Left: Content */}
+            <div className="space-y-6">
+              <div>
+                <h2 className="font-serif text-4xl sm:text-5xl text-foreground mb-4">
+                  Have Catering Needs?
+                </h2>
+                <p className="font-sans text-lg text-foreground/80 leading-relaxed">
+                  We do that too. Bring authentic Maharashtrian cuisine to your events, celebrations, and special occasions. From intimate gatherings to grand celebrations, we've got you covered.
+                </p>
+              </div>
+
+              <div className="space-y-4 pt-4">
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <p className="font-serif text-lg text-foreground mb-1">Customizable Menus</p>
+                    <p className="font-sans text-sm text-foreground/70">Choose from our signature dishes or create a custom menu</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <p className="font-serif text-lg text-foreground mb-1">Professional Service</p>
+                    <p className="font-sans text-sm text-foreground/70">Trained staff to ensure your event runs smoothly</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-accent flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <p className="font-serif text-lg text-foreground mb-1">All Sizes Welcome</p>
+                    <p className="font-sans text-sm text-foreground/70">From 10 people to 500+, we handle it all</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Form */}
+            <div className="bg-gradient-to-br from-muted to-background border border-border rounded-xl p-6 sm:p-8 shadow-lg">
+              <h3 className="font-serif text-2xl text-foreground mb-6">Get a Quote</h3>
+
+              <form className="space-y-4" onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData);
+
+                try {
+                  const response = await fetch("/api/catering", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                  });
+
+                  if (response.ok) {
+                    alert('Thank you! We will contact you soon with a quote.');
+                    (e.currentTarget as HTMLFormElement).reset();
+                  } else {
+                    alert('There was an error submitting your request. Please try again.');
+                  }
+                } catch (error) {
+                  console.error('Catering form error:', error);
+                  alert('There was an error submitting your request. Please try again.');
+                }
+              }}>
+                {/* Name */}
+                <div>
+                  <label className="block font-sans text-sm font-medium text-foreground mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                    className="w-full px-4 py-2 bg-background border border-border rounded-lg font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block font-sans text-sm font-medium text-foreground mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-2 bg-background border border-border rounded-lg font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block font-sans text-sm font-medium text-foreground mb-2">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="+91 98765 43210"
+                    className="w-full px-4 py-2 bg-background border border-border rounded-lg font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                  />
+                </div>
+
+                {/* Location */}
+                <div>
+                  <label className="block font-sans text-sm font-medium text-foreground mb-2">
+                    Event Location *
+                  </label>
+                  <input
+                    type="text"
+                    name="location"
+                    required
+                    placeholder="Venue name or address"
+                    className="w-full px-4 py-2 bg-background border border-border rounded-lg font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                  />
+                </div>
+
+                {/* Number of People */}
+                <div>
+                  <label className="block font-sans text-sm font-medium text-foreground mb-2">
+                    Expected Number of Guests *
+                  </label>
+                  <select
+                    name="guests"
+                    required
+                    className="w-full px-4 py-2 bg-background border border-border rounded-lg font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                  >
+                    <option value="">Select number of guests</option>
+                    <option value="10-25">10 - 25 people</option>
+                    <option value="25-50">25 - 50 people</option>
+                    <option value="50-100">50 - 100 people</option>
+                    <option value="100-200">100 - 200 people</option>
+                    <option value="200-500">200 - 500 people</option>
+                    <option value="500+">500+ people</option>
+                  </select>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label className="block font-sans text-sm font-medium text-foreground mb-2">
+                    Event Details (Optional)
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={3}
+                    placeholder="Tell us about your event, preferences, or any special requirements..."
+                    className="w-full px-4 py-2 bg-background border border-border rounded-lg font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-accent to-secondary text-accent-foreground font-sans font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 mt-6"
+                >
+                  Request a Quote
+                </button>
+
+                <p className="font-sans text-xs text-muted-foreground text-center mt-4">
+                  We'll contact you within 24 hours with a personalized quote.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA SECTION */}
       <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
         <div className="absolute inset-0 opacity-20">
