@@ -389,7 +389,7 @@ export default function Index() {
                   </svg>
                   <div>
                     <p className="font-serif text-lg text-foreground mb-1">Customizable Menus</p>
-                    <p className="font-sans text-sm text-foreground/70">Choose from our signature dishes or create a custom menu</p>
+                    <p className="font-sans text-sm text-foreground/70">Choose from our signature dishes or create a menu tailored to your taste</p>
                   </div>
                 </div>
 
@@ -398,8 +398,8 @@ export default function Index() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <p className="font-serif text-lg text-foreground mb-1">Professional Service</p>
-                    <p className="font-sans text-sm text-foreground/70">Trained staff to ensure your event runs smoothly</p>
+                    <p className="font-serif text-lg text-foreground mb-1">Consistent Taste, Every Time</p>
+                    <p className="font-sans text-sm text-foreground/70">Same recipes, same flavors you love, served just the way you remember</p>
                   </div>
                 </div>
 
@@ -408,8 +408,8 @@ export default function Index() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <p className="font-serif text-lg text-foreground mb-1">All Sizes Welcome</p>
-                    <p className="font-sans text-sm text-foreground/70">From 10 people to 500+, we handle it all</p>
+                    <p className="font-serif text-lg text-foreground mb-1">Perfect for Every Gathering</p>
+                    <p className="font-sans text-sm text-foreground/70">Whether it's an intimate group or a large celebration, we cater to it all</p>
                   </div>
                 </div>
               </div>
