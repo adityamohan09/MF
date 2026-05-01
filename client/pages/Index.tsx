@@ -59,7 +59,7 @@ export default function Index() {
               {/* Main Heading */}
               <div className="space-y-3 sm:space-y-4">
                 <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-tight text-foreground">
-                  Maharashtra on a <span className="text-accent block">Plate</span>
+                  Maharashtra on<br /><span className="text-accent">a Plate</span>
                 </h1>
                 <p className="font-sans text-lg sm:text-xl text-muted-foreground font-light">
                   In the Heart of Delhi
