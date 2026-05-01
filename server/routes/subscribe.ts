@@ -16,23 +16,30 @@ export const handleSubscribe: RequestHandler = async (req, res) => {
 
     if (RESEND_API_KEY) {
       // Using Resend email service (recommended)
-      const response = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-        },
-        body: JSON.stringify({
-          from: "noreply@maharashtrafoodstall.com",
-          to: RECIPIENT_EMAIL,
-          subject: `New Email Subscription from ${email}`,
-          html: `<p>New email subscription received from: <strong>${email}</strong></p>
-                 <p>Consider adding them to your mailing list or contacting them with updates about Maharashtra Food Stall.</p>`,
-        }),
-      });
+      try {
+        const response = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: "onboarding@resend.dev",
+            to: RECIPIENT_EMAIL,
+            subject: `New Email Subscription from ${email}`,
+            html: `<p>New email subscription received from: <strong>${email}</strong></p>
+                   <p>Consider adding them to your mailing list or contacting them with updates about Maharashtra Food Stall.</p>`,
+          }),
+        });
 
-      if (!response.ok) {
-        throw new Error("Failed to send email");
+        const responseData = await response.json();
+        if (!response.ok) {
+          console.error("Resend API error:", responseData);
+        } else {
+          console.log("✅ Subscription email sent:", responseData.id);
+        }
+      } catch (emailError) {
+        console.error("Email sending failed:", emailError);
       }
     } else {
       // Development mode - log to console

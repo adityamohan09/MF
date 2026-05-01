@@ -25,32 +25,39 @@ export const handleCatering: RequestHandler = async (req, res) => {
     const ADMIN_EMAIL = "adityamohan2026@gmail.com";
 
     if (RESEND_API_KEY) {
-      const response = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-        },
-        body: JSON.stringify({
-          from: "noreply@maharashtrafoodstall.com",
-          to: ADMIN_EMAIL,
-          subject: `New Catering Inquiry from ${name}`,
-          html: `
-            <h2>New Catering Inquiry</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
-            <p><strong>Event Location:</strong> ${location}</p>
-            <p><strong>Number of Guests:</strong> ${guests}</p>
-            ${message ? `<p><strong>Additional Details:</strong></p><p>${message}</p>` : ""}
-            <hr />
-            <p>Please contact the customer at your earliest convenience with a catering quote.</p>
-          `,
-        }),
-      });
+      try {
+        const response = await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: "onboarding@resend.dev",
+            to: ADMIN_EMAIL,
+            subject: `New Catering Inquiry from ${name}`,
+            html: `
+              <h2>New Catering Inquiry</h2>
+              <p><strong>Name:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone}</p>
+              <p><strong>Event Location:</strong> ${location}</p>
+              <p><strong>Number of Guests:</strong> ${guests}</p>
+              ${message ? `<p><strong>Additional Details:</strong></p><p>${message}</p>` : ""}
+              <hr />
+              <p>Please contact the customer at your earliest convenience with a catering quote.</p>
+            `,
+          }),
+        });
 
-      if (!response.ok) {
-        console.error("Failed to send catering inquiry email");
+        const responseData = await response.json();
+        if (!response.ok) {
+          console.error("Resend API error:", responseData);
+        } else {
+          console.log("✅ Email sent successfully:", responseData.id);
+        }
+      } catch (emailError) {
+        console.error("Email sending failed:", emailError);
       }
     }
 
