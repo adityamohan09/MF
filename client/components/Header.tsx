@@ -8,13 +8,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          {/* Branding */}
-          <Link to="/" className="flex-shrink-0 flex flex-col">
-            <div className="font-serif font-bold text-lg sm:text-xl text-accent leading-tight">
-              MAHARASHTRA<br className="hidden sm:block" />
-              <span className="text-accent">FOOD STALL</span>
-            </div>
-            <p className="font-sans text-xs text-muted-foreground">Since 1994</p>
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Faf03adb24251416b91a4f43841b93384%2F6d82ba8dea76472ebed51e54b7f4fbf1?format=webp&width=800&height=1200"
+              alt="Maharashtra Food Stall"
+              className="h-12 sm:h-14 w-auto"
+            />
           </Link>
 
           {/* Navigation Links - Desktop */}
