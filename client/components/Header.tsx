@@ -50,7 +50,7 @@ export default function Header() {
               Contact Us
             </a>
             <a
-              href="https://itl.ink/websitezomato"
+              href="https://drive.google.com/file/d/1mFejlJ55c7rpMvqSXHee17Tyqp8zEmEA/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-accent text-accent-foreground font-sans text-sm font-medium hover:bg-secondary transition-colors rounded"
@@ -105,7 +105,7 @@ export default function Header() {
                   Contact Us
                 </a>
                 <a
-                  href="https://itl.ink/websitezomato"
+                  href="https://drive.google.com/file/d/1mFejlJ55c7rpMvqSXHee17Tyqp8zEmEA/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-accent text-accent-foreground font-sans text-sm font-medium hover:bg-secondary transition-colors rounded text-center"

@@ -60,23 +60,37 @@ export default function Footer() {
           {/* Column 2: Contact */}
           <div>
             <h3 className="font-serif text-lg mb-6 text-foreground">Contact</h3>
-            <div className="space-y-4">
+            <div className="space-y-6">
+              {/* Location 1 */}
               <div>
-                <p className="font-sans text-xs text-muted-foreground mb-1">Phone</p>
-                <a
-                  href="tel:+919990810599"
-                  className="font-sans text-sm text-foreground hover:text-accent transition-colors font-semibold"
-                >
-                  +91 9990810599
-                </a>
-              </div>
-              <div>
-                <p className="font-sans text-xs text-muted-foreground mb-1">Address</p>
-                <p className="font-sans text-sm text-foreground">
+                <p className="font-sans font-semibold text-sm text-foreground mb-2">Maharashtra Food Stall</p>
+                <p className="font-sans text-sm text-foreground/80 leading-relaxed">
                   Stall No: 20<br />
                   Dilli Haat, INA<br />
                   New Delhi - 110023
                 </p>
+                <a
+                  href="tel:+919990810599"
+                  className="font-sans text-sm text-accent hover:text-secondary transition-colors font-semibold mt-2 block"
+                >
+                  Ph. No: +91 9990810599
+                </a>
+              </div>
+
+              {/* Location 2 */}
+              <div className="pt-4 border-t border-border">
+                <p className="font-sans font-semibold text-sm text-foreground mb-2">Maharashtra Food</p>
+                <p className="font-sans text-sm text-foreground/80 leading-relaxed">
+                  C-22, Vipul Plaza<br />
+                  Sector 81, Faridabad<br />
+                  Haryana - 121007
+                </p>
+                <a
+                  href="tel:+919582240469"
+                  className="font-sans text-sm text-accent hover:text-secondary transition-colors font-semibold mt-2 block"
+                >
+                  Ph. No: +91 9582240469
+                </a>
               </div>
             </div>
           </div>
