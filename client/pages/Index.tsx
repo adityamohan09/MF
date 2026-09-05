@@ -151,7 +151,7 @@ export default function Index() {
 
               <div className="space-y-6 font-sans text-foreground leading-relaxed text-base sm:text-lg">
                 <p className="text-lg font-light">
-                  Vibhavari N. Chiplunkar is a Maharashtrian entrepreneur who brought the flavors of her roots to Delhi at a time when regional cuisines were still finding their space.
+                  Mrs. Vibhavari N. Chiplunkar is a Maharashtrian entrepreneur who brought the flavors of her roots to Delhi at a time when regional cuisines were still finding their space.
                 </p>
                 <p>
                   Born and raised in Delhi, she grew up in a family deeply connected to Maharashtrian culture and traditions. Her early education at Nutan Marathi Vidyalaya, one of the only Marathi schools in the city at the time, shaped her cultural foundation.
@@ -166,7 +166,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-lg blur-2xl" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Faf03adb24251416b91a4f43841b93384%2F4b1c230bea9c4238b36e53eb009bc03a?format=webp&width=800&height=1200"
-                alt="Vibhavari N. Chiplunkar - Founder of Maharashtra Food Stall"
+                alt="Mrs. Vibhavari N. Chiplunkar - Founder of Maharashtra Food Stall"
                 className="relative w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 object-cover"
               />
             </div>
@@ -191,7 +191,7 @@ export default function Index() {
             <div className="relative pl-8 border-l-2 border-accent/30 hover:border-accent transition-colors duration-300">
               <p className="text-base text-accent font-semibold mb-2">1994</p>
               <p className="font-light">
-                In 1994, Vibhavari started the Maharashtra Food Stall at Dilli Haat. What began as a small initiative soon became a cultural landmark.
+                In 1994, Mrs. Vibhavari started the Maharashtra Food Stall at Dilli Haat. What began as a small initiative soon became a cultural landmark.
               </p>
             </div>
             
